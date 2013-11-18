@@ -19,96 +19,432 @@
     </head>
     <body>
         <div data-role="page" data-control-title="Home" data-theme="f" id="home">
-          <div data-theme="f" data-role="header">
-              <h3>
-                  StockRoom
-              </h3>
+      <div data-theme="d" data-role="header" data-position="fixed">
+          <h3>
+              StockRoom
+          </h3>
+      </div>
+      <div data-role="content">
+          <div style="" data-controltype="image">
+              <img style="width: 75%; height: px" src="img/stockroom_logo_150.png">
           </div>
-          <div data-role="content">
-              <div style="" data-controltype="image">
-                  <img style="width: 75%; height: px" src="img/stockroom_logo_150.png">
-              </div>
-              <h2>
-                  Login
-              </h2>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="uname" id="uname" placeholder="username" value="" type="text">
-              </div>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="pword" id="pword" placeholder="password" value="" type="password">
-              </div>
-              <input id="loginBtn" type="submit" data-theme="h" value="Submit">
-              <div id="loginResp" data-controltype="textblock">
-              </div>
-              <a data-role="button" data-inline="true" href="#page3">
-                  Register
-              </a>
-              <a data-role="button" data-inline="true" data-theme="e" href="#page4">
-                  Lost Password
-              </a>
+          <h2>
+              Login
+          </h2>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="uname" id="uname" placeholder="username" value="" type="text">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="pword" id="pword" placeholder="password" value="" type="password">
+          </div>
+          <input id="loginBtn" type="submit" data-theme="f" value="Submit">
+          <div id="loginResp" data-controltype="textblock">
+          </div>
+          <a data-role="button" data-inline="true" data-theme="e" href="#register">
+              Register
+          </a>
+          <a data-role="button" data-inline="true" data-theme="h" href="#reset">
+              Lost Password
+          </a>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Register" data-theme="f" id="register">
+      <div data-theme="f" data-role="header" data-position="fixed">
+          <a data-role="button" data-direction="reverse" data-rel="back" data-theme="e"
+          href="#home" data-icon="ios-pack-color-left-arrow" data-iconpos="left"
+          data-iconsize="26" class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              StockRoom
+          </h3>
+      </div>
+      <div data-role="content">
+          <h2>
+              Register
+          </h2>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="r_uname" id="r_uname" placeholder="username" value="" type="text">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="r_pword" id="r_pword" placeholder="password" value="" type="password">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="r_pword_2" id="r_pword_2" placeholder="password confirmation"
+              value="" type="password">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="r_phone" id="r_phone" placeholder="phone" value="" type="tel">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="r_email" id="r_email" placeholder="email" value="" type="email">
+          </div>
+          <input id="registerBtn" type="submit" data-theme="f" value="Register">
+          <div id="r_resp" data-controltype="textblock">
           </div>
       </div>
-      <div data-role="page" data-control-title="Register" data-theme="f" id="page3">
-          <div data-theme="f" data-role="header">
-              <a data-role="button" data-direction="reverse" data-rel="back" data-theme="e"
-              href="#home" data-icon="ios-pack-color-left-arrow" data-iconpos="left"
-              data-iconsize="26" class="ui-btn-left">
-                  Back
-              </a>
-              <h3>
-                  StockRoom
-              </h3>
+  </div>
+  <div data-role="page" data-control-title="Reset" data-theme="f" id="reset">
+      <div data-theme="f" data-role="header" data-position="fixed">
+          <a data-role="button" data-direction="reverse" data-rel="back" data-theme="e"
+          href="#home" data-icon="ios-pack-color-left-arrow" data-iconpos="left"
+          data-iconsize="26" class="ui-btn-left">
+              Back
+          </a>
+          <h3>
+              StockRoom
+          </h3>
+      </div>
+      <div data-role="content">
+          <h2>
+              Password Recovery
+          </h2>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="reset_email" id="reset_email" placeholder="email address"
+              value="" type="email">
           </div>
-          <div data-role="content">
-              <h2>
-                  Register
-              </h2>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="r_uname" id="r_uname" placeholder="username" value="" type="text">
+          <input id="resetBtn" type="submit" data-theme="f" value="Submit">
+          <div id="resetResp" data-controltype="textblock">
+              .
+          </div>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Springboard" id="springboard">
+      <div data-role="panel" id="panel1" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-theme="">
+                  <a href="#home" data-transition="none">
+                      Products
+                  </a>
+              </li>
+              <li data-role="list-divider" role="heading">
+                  People
+              </li>
+              <li data-theme="a">
+                  <a href="#customers" data-transition="none">
+                      Customers
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Vendors
+                  </a>
+              </li>
+              <li data-role="list-divider" role="heading">
+                  Transactions
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Purchases
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Sales
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Returned Goods
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Damaged Goods
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Stolen Goods
+                  </a>
+              </li>
+              <li data-role="list-divider" role="heading">
+                  Reports
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Inventory
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      General Reports
+                  </a>
+              </li>
+              <li data-role="list-divider" role="heading">
+                  Others
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Settings
+                  </a>
+              </li>
+              <li data-role="list-divider" role="heading">
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="none">
+                      Logout
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="f" data-role="header" data-position="fixed">
+          <a data-controltype="panelbutton" data-role="button" href="#panel1" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Menu
+          </a>
+          <h3>
+              StockRoom
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-b">
+              <div class="ui-block-a">
+                  <a href="#customers" data-controltype="image">
+                      <div style=" text-align:center">
+                          <img style="width: 100%; height: 100%" src="img/customers.png">
+                      </div>
+                  </a>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;">
+                              <b>
+                                  Customers
+                              </b>
+                          </span>
+                      </p>
+                  </div>
               </div>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="r_pword" id="r_pword" placeholder="password" value="" type="password">
+              <div class="ui-block-b">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/vendors.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Vendors
+                              </b>
+                          </span>
+                      </p>
+                  </div>
               </div>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="r_pword_2" id="r_pword_2" placeholder="password confirmation"
-                  value="" type="password">
+              <div class="ui-block-c">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/warehouse.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Warehouses
+                              </b>
+                          </span>
+                      </p>
+                  </div>
               </div>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="r_phone" id="r_phone" placeholder="phone" value="" type="tel">
+              <div class="ui-block-a">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/products.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Products
+                              </b>
+                          </span>
+                      </p>
+                  </div>
               </div>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="r_email" id="r_email" placeholder="email" value="" type="email">
+              <div class="ui-block-b">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/purchases.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Purchases
+                              </b>
+                          </span>
+                      </p>
+                  </div>
               </div>
-              <input id="registerBtn" type="submit" data-theme="g" value="Register">
-              <div id="r_resp" data-controltype="textblock">
+              <div class="ui-block-c">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/sales.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Sales
+                              </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/manufacturing.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Manufacturing
+                              </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/inventory.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Inventory
+                              </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-c">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/reports.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Reports
+                              </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-a">
+                  <div style=" text-align:center" data-controltype="image">
+                      <img style="width: 100%; height: 100%" src="img/admin.png">
+                  </div>
+                  <div data-controltype="textblock">
+                      <p style="text-align: center;">
+                          <span style="font-size: x-small;" data-mce-style="font-size: x-small;">
+                              <b>
+                                  Admin
+                              </b>
+                          </span>
+                      </p>
+                  </div>
+              </div>
+              <div class="ui-block-b">
+              </div>
+              <div class="ui-block-c">
               </div>
           </div>
       </div>
-      <div data-role="page" data-control-title="Reset" data-theme="f" id="page4">
-          <div data-theme="f" data-role="header">
-              <a data-role="button" data-direction="reverse" data-rel="back" data-theme="e"
-              href="#home" data-icon="ios-pack-color-left-arrow" data-iconpos="left"
-              data-iconsize="26" class="ui-btn-left">
-                  Back
-              </a>
-              <h3>
-                  StockRoom
-              </h3>
-          </div>
-          <div data-role="content">
-              <h2>
-                  Password Recovery
-              </h2>
-              <div data-role="fieldcontain" data-controltype="textinput">
-                  <input name="reset_email" id="reset_email" placeholder="email address"
-                  value="" type="email">
-              </div>
-              <input id="resetBtn" type="submit" data-theme="g" value="Submit">
-              <div id="resetResp" data-controltype="textblock">
-                  .
-              </div>
-          </div>
+  </div>
+  <div data-role="page" data-control-title="Customers" data-theme="f" id="customers">
+      <div data-theme="f" data-role="header" data-position="fixed">
+          <a data-role="button" href="#page9" data-icon="plus" data-iconpos="right"
+          class="ui-btn-right">
+              Add
+          </a>
+          <h3>
+              StockRoom
+          </h3>
       </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="a" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Customers
+              </li>
+              <li data-theme="d">
+                  <a href="#home" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Customer" data-theme="f" id="page7">
+      <div data-theme="f" data-role="header" data-position="fixed">
+          <h3>
+              StockRoom
+          </h3>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="a" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Customer Details
+              </li>
+              <li data-theme="c">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+          <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;">
+          <ul data-role="listview" data-divider-theme="a" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Customer Transactions
+              </li>
+              <li data-theme="c">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="CustomerPayment" data-theme="f"
+  id="customerpayment">
+      <div data-role="content">
+      </div>
+  </div>
+  <div data-role="page" data-control-title="NewCustomer" data-theme="f"
+  id="page9">
+      <div data-theme="f" data-role="header">
+          <a data-role="button" data-direction="reverse" data-rel="back" href="#customers"
+          class="ui-btn-right">
+              Back
+          </a>
+          <h3>
+              StockRoom
+          </h3>
+      </div>
+      <div data-role="content">
+          <div data-controltype="textblock">
+              <p>
+                  <b>
+                      Customer
+                  </b>
+              </p>
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="" id="newCustName" placeholder="customer name" value="" type="text">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="" id="newCustAddr" placeholder="address" value="" type="text">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="" id="newCustPhone" placeholder="phone number" value="" type="tel">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="" id="newCustEmail" placeholder="email" value="" type="email">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input name="" id="newCustBalance" placeholder="opening balace" value=""
+              type="text">
+          </div>
+          <input id="newCustomerBtn" type="submit" value="Save">
+      </div>
+  </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script src="https://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
         <script src="js/stockroom.js"></script>
